@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css">
+</head>
+<body>
+    <!--Viết tắt thẻ div: .tenclass hoặc #tenid sau đó tab là được-->
+    <!--Dùng tổ hợp phím Ctrl + Shift + L để xài multiple cursor (đa trỏ chuột)
+    Sau đó dùng tổ hợp phía Alt + Shift + Mũi tên phải để chọn hết-->
+    <!---->
+    <div id="main">
+        <div id="header">
+            <!--Begin nav-->
+            <ul id="nav">
+                <li><a href="">Home</a></li>
+                <li><a href="">Band</a></li>
+                <li><a href="">Tour</a></li>
+                <li><a href="">Contact</a></li>
+                <!--href="#" biểu thị thẻ a không link sang một đường dẫn khác-->
+                <li><a href="#">
+                    More <i class="nav-arrow-down ti-angle-down"></i>
+                </a>
+                    <ul class="subnav">
+                        <li><a href="">Merchandise</a></li>
+                        <li><a href="">Extras</a></li>
+                        <li><a href="">Media</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!--End nav-->
+            <!-- Begin button -->
+            <div class="search-button">
+                <i class="search-icon ti-search"></i>
+            </div>
+            <!-- End button -->
+        </div>
+        <!-- Start slider -->
+        <!-- Giao diện web mặc định các phần tử có thể sẽ va đập, chồng chéo lên nhau
+        Hãy sử dụng CSS Position cho những trường hợp phần tử này đè lên phần tử kia -->
+        <!-- Vì đang sử dụng thẻ div làm slider nên slider tự động có tính chất block của thẻ div,
+        nên sẽ tự động kế thừa toàn bộ chiều rộng trình duyệt web -->
+        <!-- Ảnh trên trình duyệt luôn theo nguyên tắc hiển thị theo tỉ lệ gốc của bức ảnh (1/2, 2/3, ...) 
+        và không cần hiển thị kích thước gốc của ảnh -->
+
+        <div id="slider">
+            <div class="text-content">
+                <h2 class="text-heading">New York</h2>
+                <p class="text-description">The atmosphere in New York is lorem ipsum.</p>
+            </div>
+        </div>
+        <!-- End slider -->
+
+        <div id="content">
+
+        </div>
+
+        <div id="footer">
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+/*Reset CSS đơn giản nhất*/
+* {
+    padding: 0;
+    margin: 0;
+    /*Loại bỏ tính toán kích thước khi có border hoặc padding bằng lệnh box-sizing: border-box;*/
+    box-sizing: border-box;
+}
+
+html {
+    /*Thuộc tính font-family set font chữ cho cả website*/
+    font-family: Lato, sans-serif;
+}
+
+/*Nguyên tắc làm việc
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Từ tổng quan đến chi tiết
+*/
+
+/* Đặt ra những câu hỏi sau để biết mình cần làm gì
+1. Vị trí
+2. Kích thước (width, height)
+3. Màu sắc
+4. Kiểu chữ
+*/
+
+#main {
+
+}
+
+#nav {
+    display: inline-block;
+}
+
+#header {
+    height: 46.5px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#nav, .subnav {
+    /*CSS list-style-type chỉ định kiểu của danh sách (thẻ ul, ol và li)
+    Mặc định của list-style-type là một dấu chấm*/
+    list-style-type: none;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+/*Selector này có nghĩa là thẻ a phải là thẻ con trực tiếp (thẻ con cấp 1) của thẻ li, 
+và thẻ li phải là thẻ con trực tiếp của id="nav" thì mới được tính*/
+#nav > li > a {
+    color: #fff;
+}
+
+/*Selector này có nghĩa là thẻ a phải là thẻ con (cấp mấy cũng đc) của thẻ li, 
+và thẻ li phải là thẻ con của id="nav" thì mới được tính*/
+#nav li a {
+    /*Mặc định là chữ nằm giữa đường bao phủ nó, sử dụng thuộc tính line-height = đúng chiều cao header để áp dụng quy tắc đó giúp căn giữa chữ*/
+    line-height: 46.5px;
+    padding: 0 24px;
+    /*Sử dụng thuộc tính display: inline-block để thẻ a ăn theo line-height*/
+    display: block;
+    /*Tính chất của block kế thừa chiều ngang của thẻ chứa nó*/
+    text-decoration: none;
+    /* Thuộc tính text-decoration giúp chỉnh gạch chân, in nghiêng chữ, ... */
+}
+
+/*Nếu :hover vào thẻ a thì khi di chuột vào thẻ a đó và xuất hiện menu subnav 
+sẽ mất hiệu ứng :hover của thẻ a, nên chúng ta :hover vào thẻ li*/
+#nav > li:hover > a,
+#nav .subnav li:hover a {
+    color: #000;
+    background-color: #ccc;
+}
+/*CSS cho .subnav là con của li và li là con của #nav khi hover đúng thẻ li*/
+#nav li:hover .subnav {
+    /*khi hover vào thẻ li đc chọn sẽ đè thuộc tính display: none của 
+    css selector #nav .subnav*/
+    display: block;
+}
+
+#nav .subnav {
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    /*Thêm top: 100% và left: 0 để chắc chắn thẻ con của thẻ more sẽ nằm đúng vị trí của nó*/
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#nav .subnav a {
+    color: #000;
+    padding: 8px 16px;
+    line-height: 22.5px;
+}
+
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+
+#header .search-button {
+    float: right;
+    color: #fff;
+    line-height: 46px;
+    padding: 0 21px;
+    cursor: pointer;
+}
+
+#header .search-button:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+#slider {
+    /*Dùng margin-top để kéo phần slider xuống đứng dưới phần header.
+    Nếu không có margin-top, phần header sẽ đè lên phần slider
+    46.5px ở đây là line-height của header*/
+    margin-top: 46.5px;
+    /* 50% ở đây là 50% chiều ngang của chính nó */
+    padding-top: 50%;
+    background: url('/Project/W3_the_band/assets/img/slider/chicago.jpg') top center / cover no-repeat;
+    /* Thuộc tính background phía trên hiện tại đang viết gộp lại từ nhiều thuộc tính khác.
+    Chúng ta có thể viết rời ra như sau:
+    background-image: url('/Project/W3_the_band/assets/img/slider/chicago.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    */
+    position: relative;
+}
+
+#slider .text-content {
+    position: absolute;
+}
+
+#slider .text-heading {
+
+}
+
+#slider .text-description {
+
+}
+
+
+#content {
+    height: 2000px;
+    background-color: #ccc;
+}
+
+#footer {
+
+}
