@@ -112,6 +112,8 @@ sẽ mất hiệu ứng :hover của thẻ a, nên chúng ta :hover vào thẻ l
 }
 
 #header .search-button {
+    /* Thuộc tính float: right kéo phần tử sang bên phải. 
+    Khi thẻ div dù có tính chất khối bị thêm thuộc tính float thì vẫn mất tính chất khối của nó */
     float: right;
     color: #fff;
     line-height: 46px;
