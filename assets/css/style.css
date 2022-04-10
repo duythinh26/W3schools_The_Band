@@ -33,7 +33,7 @@ html {
 }
 
 #header {
-    height: 46.5px;
+    height: 46px;
     background-color: #000;
     position: fixed;
     top: 0;
@@ -59,13 +59,15 @@ html {
 và thẻ li phải là thẻ con trực tiếp của id="nav" thì mới được tính*/
 #nav > li > a {
     color: #fff;
+    /* Thuộc tính text-transform chỉnh sửa chữ hoa hoặc chữ thường */
+    text-transform: uppercase;
 }
 
 /*Selector này có nghĩa là thẻ a phải là thẻ con (cấp mấy cũng đc) của thẻ li, 
 và thẻ li phải là thẻ con của id="nav" thì mới được tính*/
 #nav li a {
     /*Mặc định là chữ nằm giữa đường bao phủ nó, sử dụng thuộc tính line-height = đúng chiều cao header để áp dụng quy tắc đó giúp căn giữa chữ*/
-    line-height: 46.5px;
+    line-height: 46px;
     padding: 0 24px;
     /*Sử dụng thuộc tính display: inline-block để thẻ a ăn theo line-height*/
     display: block;
@@ -102,7 +104,7 @@ sẽ mất hiệu ứng :hover của thẻ a, nên chúng ta :hover vào thẻ l
 #nav .subnav a {
     color: #000;
     padding: 8px 16px;
-    line-height: 22.5px;
+    line-height: 22px;
 }
 
 #nav .nav-arrow-down {
@@ -125,8 +127,8 @@ sẽ mất hiệu ứng :hover của thẻ a, nên chúng ta :hover vào thẻ l
 #slider {
     /*Dùng margin-top để kéo phần slider xuống đứng dưới phần header.
     Nếu không có margin-top, phần header sẽ đè lên phần slider
-    46.5px ở đây là line-height của header*/
-    margin-top: 46.5px;
+    46px ở đây là line-height của header*/
+    margin-top: 46px;
     /* 50% ở đây là 50% chiều ngang của chính nó */
     padding-top: 50%;
     background: url('/Project/W3_the_band/assets/img/slider/chicago.jpg') top center / cover no-repeat;
