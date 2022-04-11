@@ -39,6 +39,11 @@ html {
     top: 0;
     left: 0;
     right: 0;
+    /* Thuộc tính z-index chỉ định độ ưu tiên của một phần tử (lớn hơn đứng trước)
+    z-index chỉ hoạt động với những selector có thuộc tính position
+    Nếu hai phần tử có chứa thuộc tính position nằm chồng lên nhau mà ko sử dụng z-index, 
+    thuộc tính position nào nằm ở dòng code có số lớn hơn sẽ được ưu tiên */
+    z-index: 1;
 }
 
 #nav, .subnav {
@@ -133,7 +138,7 @@ sẽ mất hiệu ứng :hover của thẻ a, nên chúng ta :hover vào thẻ l
     margin-top: 46px;
     /* 50% ở đây là 50% chiều ngang của chính nó */
     padding-top: 50%;
-    background: url('/Project/W3_the_band/assets/img/slider/chicago.jpg') top center / cover no-repeat;
+    background: url('/assets/img/slider/chicago.jpg') top center / cover no-repeat;
     /* Thuộc tính background phía trên hiện tại đang viết gộp lại từ nhiều thuộc tính khác.
     Chúng ta có thể viết rời ra như sau:
     background-image: url('/Project/W3_the_band/assets/img/slider/chicago.jpg');
@@ -141,25 +146,41 @@ sẽ mất hiệu ứng :hover của thẻ a, nên chúng ta :hover vào thẻ l
     background-size: cover;
     background-repeat: no-repeat;
     */
+    /* Thuộc tính position này tương tác với thuộc tính position của #slider .text-content */
     position: relative;
 }
 
 #slider .text-content {
     position: absolute;
+    bottom: 48px;
+    color: #fff;
+    text-align: center;
+    /* Cách căn giữa thứ nhất: */
+    /* left: 50%;
+    transform: translateX(-50%); */
+    /* Cách căn giữa thứ hai: */
+    /* left: 0;
+    right: 0; */
+    /* Cách căn giữa thứ ba: */
+    width: 100%;
+    /* Ở đây chúng ta xài cách thứ ba vì nó đơn giản */
 }
 
 #slider .text-heading {
-
+    font-weight: 500;
+    font-size: 24px;
 }
 
 #slider .text-description {
+    font-size: 15px;
+    margin-top: 25px;
 
 }
 
 
 #content {
     height: 2000px;
-    background-color: #ccc;
+    /* background-color: #ccc; */
 }
 
 #footer {
