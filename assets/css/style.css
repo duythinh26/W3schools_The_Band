@@ -183,6 +183,41 @@ sẽ mất hiệu ứng :hover của thẻ a, nên chúng ta :hover vào thẻ l
     /* background-color: #ccc; */
 }
 
+#content .content-section {
+    width: 800px;
+    /* Margin sang trái và sang phải 1 khoảng bằng auto sẽ đẩy phần được margin ra giữa */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+}
+
+#content .heading-section {
+    font-size: 30px;
+    font-weight: 300;
+    /* letter-spacing dùng để tăng độ dài khoảng cách giữa các chữ cái */
+    letter-spacing: 4px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#content .section-sub-heading {
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.5;
+    margin: 15px;
+    text-align: center;
+}
+
+#content .about-txt {
+    font-size: 15px;
+    margin: 15px 0;
+    /* text-align: justify; giúp cho căn chỉnh 2 lề trái phải bằng nhau */
+    text-align: justify;
+    /* line-height dùng để chỉnh độ cao của dòng. Tiếng Anh thì thường là 1.4, tiếng Việt là 1.6*/
+    line-height: 1.4;
+}
+
+
 #footer {
 
 }
