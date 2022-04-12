@@ -217,6 +217,36 @@ sẽ mất hiệu ứng :hover của thẻ a, nên chúng ta :hover vào thẻ l
     line-height: 1.4;
 }
 
+#content .member-list {
+    padding: 32px 0;
+    /* Vì khi dùng float cho các thẻ con (ở đây là cho class team-member, thẻ div có class member-list bị văng ra và ko ôm hết toàn bộ thẻ con
+    Do đó, chúng ta sử dụng thuộc tính overflow: hidden để thẻ div có class member-list ôm hết toàn bộ các thẻ con team-member */
+    overflow: hidden;
+}
+
+/* Ngoài việc sử dụng overflow để giải quyết vấn đề do float gây ra, chúng ta có thể tạo 1 thẻ div mới là con của thẻ div có class member-list,
+nằm dưới các class con team-member và dùng thuộc tính clear: both */
+.clear {
+    clear: both;
+}
+
+#content .team-member {
+    /* float: left giúp cho 3 thẻ thành viên đứng theo chiều ngang thay vì chiều dọc */
+    float: left;
+    width: 33.33333%;
+    text-align: center;
+}
+
+#content .name {
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+#content .member-img {
+    width: 154px;
+    border-radius: 4px;
+}
+
 
 #footer {
 
