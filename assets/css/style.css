@@ -83,6 +83,7 @@ và thẻ li phải là thẻ con của id="nav" thì mới được tính*/
     /*Tính chất của block kế thừa chiều ngang của thẻ chứa nó*/
     text-decoration: none;
     /* Thuộc tính text-decoration giúp chỉnh gạch chân, in nghiêng chữ, ... */
+    font-size: 15px;
 }
 
 /*Nếu :hover vào thẻ a thì khi di chuột vào thẻ a đó và xuất hiện menu subnav 
@@ -236,6 +237,7 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
 #content .team-member {
     /* float: left giúp cho 3 thẻ thành viên đứng theo chiều ngang thay vì chiều dọc */
     float: left;
+    /* width: 33.33333%; giúp cho 3 hình ảnh đứng cùng một hàng vì 3 ảnh cộng lại = 100% */
     width: 33.33333%;
     text-align: center;
 }
@@ -284,6 +286,74 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
     margin-right: 16px;
     border-radius: 50%;
     padding: 0 6px;
+}
+
+#content .place-list {
+    /* Kỹ thuật padding kèm margin giá trị âm để kéo mép phần place-list bằng với phần content của web */
+    margin: 0 -8px;
+    padding-bottom: 32px;
+}
+
+#content .place-section {
+    float: left;
+    /* width: 33.33333%; giúp cho 3 hình ảnh đứng cùng một hàng vì 3 ảnh cộng lại = 100% */
+    width: 33.33333%;
+    /* Padding trái phải 8px để tạo khoảng cách giữa các ảnh */
+    padding: 0 8px;
+}
+
+#content .tour-img {
+    /* Vì chiều ngang của thẻ img lớn hơn chiều ngang của .place-section phía trên, nên ta sử dụng width: 100%; 
+    để kéo ảnh nằm gọn bên trong .place-section */
+    width: 100%;
+    /* Nếu không sử dụng display: block; ở đây sẽ làm cho giữa ảnh và phần nội dung phía dưới ảnh có một đường màu đen chen ngang */
+    display: block;
+}
+
+#content .tour-img:hover {
+    opacity: 0.6;
+}
+
+#content .tour-text {
+    font-size: 15px;
+    background-color: #fff;
+    padding: 0 16px;
+}
+
+#content .tour-heading {
+    font-size: 15px;
+    font-weight: 600;
+    padding-top: 15px;
+}
+
+#content .tour-date,
+#content .tour-description {
+    margin: 15px 0;
+}
+
+#content .tour-date {
+    opacity: 0.6;
+}
+
+#content .tour-description {
+    line-height: 1.4;
+
+}
+
+#content .buy-ticket-button {
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 12px 16px;
+    margin-bottom: 15px;
+    /* Một thẻ inline (thẻ a) đang nằm dưới một thẻ block (thẻ p) nên nếu không sử dụng display: inline-block;
+    sẽ làm cho các thuộc tính margin và padding trở nên vô hiệu lực */
+    display: inline-block;
+}   
+
+#content .buy-ticket-button:hover {
+    color: #000;
+    background-color: #ccc;
 }
 
 #footer {

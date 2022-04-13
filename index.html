@@ -17,19 +17,19 @@
         <div id="header">
             <!--Begin nav-->
             <ul id="nav">
-                <li><a href="">Home</a></li>
-                <li><a href="">Band</a></li>
-                <li><a href="">Tour</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#band">Band</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <!--href="#" biểu thị thẻ a không link sang một đường dẫn khác-->
                 <li>
                     <a href="#">
                         More <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                 </li>
             </ul>
@@ -76,6 +76,7 @@
                             <p class="name">Name</p>
                             <img src="./assets/img/band/bandmember.jpg"  alt="" class="member-img">
                         </div>
+                        <!-- Class clear để giúp cho class member-list ôm hết tất cả thẻ con -->
                         <div class="clear"></div>
                     </div>
                 </div>
@@ -94,6 +95,37 @@
                             <li>October<span class="sold-out">Sold out</span></li>
                             <li>November<span class="ticket-quantity">3</span></li>
                         </ul>
+                    </div>
+                    <div class="place-list">
+                        <div class="place-section">
+                            <img class="tour-img" src="./assets/img/place/newyork.jpg" alt="New York">
+                            <div class="tour-text">
+                                <h3 class="tour-heading">New York</h3>
+                                <p class="tour-date">Fri 27 Nov 2016</p>
+                                <p class="tour-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <a href="# " class="buy-ticket-button">Buy Tickets</a>
+                            </div>
+                        </div>        
+                        <div class="place-section">
+                            <img class="tour-img" src="./assets/img/place/paris.jpg" alt="Paris">
+                            <div class="tour-text">
+                                <h3 class="tour-heading">Paris</h3>
+                                <p class="tour-date">Sat 28 Nov 2016</p>
+                                <p class="tour-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <a href="# " class="buy-ticket-button">Buy Tickets</a>
+                            </div>
+                        </div>
+                        <div class="place-section">
+                            <img class="tour-img"src="./assets/img/place/sanfran.jpg" alt="San Francisco">
+                            <div class="tour-text">
+                                <h3 class="tour-heading">San Francisco</h3>
+                                <p class="tour-date">Sun 29 Nov 2016</p>
+                                <p class="tour-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <a href="# " class="buy-ticket-button">Buy Tickets</a>
+                            </div>
+                        </div>
+                        <!-- Class clear để giúp cho class place-list ôm hết tất cả thẻ con -->
+                        <div class="clear"></div>
                     </div>
                 </div>
             </div>
