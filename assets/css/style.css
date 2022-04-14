@@ -354,6 +354,8 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
 #content .buy-ticket-button:hover {
     color: #000;
     background-color: #ccc;
+    cursor: pointer;
+    border: 2px solid #ccc;
 }
 
 #footer {
@@ -371,7 +373,7 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
     background-color: rgba(0, 0, 0, 0.4);
     /* Kỹ thuật flexbox:
     Để class modal-container nằm giữa class cha modal thì chúng ta biến class modal thành giao diện display flex bằng cách thêm thuộc tính display: flex; */
-    display: flex;
+    display: none;
     /* Dùng thuộc tính align-items: center; vào class cha modal để class modal-container nằm giữa chiều cao class cha modal */
     align-items: center;
     /* Dùng thuộc tính justify-content: center; vào class cha modal để class modal-container nằm giữa chiều ngang class cha modal */
