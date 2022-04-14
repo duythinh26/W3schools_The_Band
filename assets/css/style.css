@@ -208,13 +208,13 @@ sẽ mất hiệu ứng :hover của thẻ a, nên chúng ta :hover vào thẻ l
     font-size: 15px;
     font-style: italic;
     opacity: 0.5;
-    margin: 15px;
+    margin: 16px;
     text-align: center;
 }
 
 #content .about-txt {
     font-size: 15px;
-    margin: 15px 0;
+    margin: 16px 0;
     /* text-align: justify; giúp cho căn chỉnh 2 lề trái phải bằng nhau */
     text-align: justify;
     /* line-height dùng để chỉnh độ cao của dòng. Tiếng Anh thì thường là 1.4, tiếng Việt là 1.6*/
@@ -244,7 +244,7 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
 
 #content .name {
     font-size: 15px;
-    margin: 15px 0;
+    margin: 16px 0;
 }
 
 #content .member-img {
@@ -323,12 +323,12 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
 #content .tour-heading {
     font-size: 15px;
     font-weight: 600;
-    padding-top: 15px;
+    padding-top: 16px;
 }
 
 #content .tour-date,
 #content .tour-description {
-    margin: 15px 0;
+    margin: 16px 0;
 }
 
 #content .tour-date {
@@ -345,7 +345,7 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
     background-color: #000;
     text-decoration: none;
     padding: 12px 16px;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     /* Một thẻ inline (thẻ a) đang nằm dưới một thẻ block (thẻ p) nên nếu không sử dụng display: inline-block;
     sẽ làm cho các thuộc tính margin và padding trở nên vô hiệu lực */
     display: inline-block;
@@ -358,4 +358,108 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
 
 #footer {
 
+}
+
+.modal {
+    position: fixed;
+    /* Bốn thuộc tính top, bottom, left và right phía dưới kết hợp với position: fixed; phía trên dùng để tạo ra modal */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* Dùng thuộc tính background-color: rgba(0, 0, 0, 0.4); để tạo ra lớp overlay khi mở phần modal lên */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Kỹ thuật flexbox:
+    Để class modal-container nằm giữa class cha modal thì chúng ta biến class modal thành giao diện display flex bằng cách thêm thuộc tính display: flex; */
+    display: flex;
+    /* Dùng thuộc tính align-items: center; vào class cha modal để class modal-container nằm giữa chiều cao class cha modal */
+    align-items: center;
+    /* Dùng thuộc tính justify-content: center; vào class cha modal để class modal-container nằm giữa chiều ngang class cha modal */
+    justify-content: center;
+
+    /* Resonsive cho modal */
+    max-width: calc(100% - 32px);
+}
+
+.modal .modal-container {
+    background-color: #fff;
+    width: 900px;
+    /* Không cần đặt height cứng vì có thể sẽ phát triển thêm nội dung dẫn đến height bị tăng */
+    min-height: 200px;
+    position: relative;
+}
+
+.modal .modal-close {
+    color: #fff;
+    height: 52px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* Padding ở đây giúp căn giữa nút close theo cả 4 hướng */
+    padding: 16px;
+}
+
+.modal .modal-close:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.modal .modal-header {
+    font-size: 30px;
+    height: 130px;
+    color: #fff;
+    background-color: #009688;
+    padding: 32px 16px;
+    /* Kỹ thuật flex dùng để căn giữa đã được áp dụng phía trên */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal .modal-body {
+    /* Hầu hết mọi trường hợp phần body đều có padding trái phải nhằm tránh dính các chữ hay chi tiết vào viền */
+    padding: 0 16px;
+}
+
+.modal .modal-label {
+    /* Thêm thuộc tính display: block; để giúp cho label và input nằm trên các hàng riêng biệt nhờ tính chất block */
+    display: block;
+    font-size: 15px;
+    margin: 24px 0 12px; 
+}
+
+.modal .modal-input {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.modal #buy-ticket {
+    width: 100%;
+    background-color: #009688;
+    color: #fff;
+    padding: 16px;
+    margin: 16px 0;
+    border: 0;
+    text-transform: uppercase;
+}
+
+.modal #buy-ticket:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.modal .modal-footer {
+    text-align: right;
+    margin: 16px 0;
+}
+
+.modal .modal-help {
+    padding: 0 16px;
+}
+
+.modal .modal-help a {
+    color: #2196F3;
 }
