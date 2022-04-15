@@ -337,7 +337,6 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
 
 #content .tour-description {
     line-height: 1.4;
-
 }
 
 #content .buy-ticket-button {
@@ -381,6 +380,10 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
 
     /* Resonsive cho modal */
     max-width: calc(100% - 32px);
+}
+
+.modal.open {
+    display: flex;
 }
 
 .modal .modal-container {

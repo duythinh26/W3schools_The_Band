@@ -103,7 +103,10 @@
                                 <h3 class="tour-heading">New York</h3>
                                 <p class="tour-date">Fri 27 Nov 2016</p>
                                 <p class="tour-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="buy-ticket-button">Buy Tickets</button>
+                                <!-- Để lắng nghe hành vi click chuột vào nút button Buy Tickets, ta tạo 1 class mới cho nút button là js-buy-ticket
+                                Đặt tên class ở đây có tác dụng giúp khi viết javascript sẽ lấy được cái thẻ mà user click vào, 
+                                từ đó lắng nghe được hành vi của user -->
+                                <button class="buy-ticket-button js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>        
                         <div class="place-section">
@@ -112,7 +115,7 @@
                                 <h3 class="tour-heading">Paris</h3>
                                 <p class="tour-date">Sat 28 Nov 2016</p>
                                 <p class="tour-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="buy-ticket-button">Buy Tickets</button>
+                                <button class="buy-ticket-button js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="place-section">
@@ -121,7 +124,7 @@
                                 <h3 class="tour-heading">San Francisco</h3>
                                 <p class="tour-date">Sun 29 Nov 2016</p>
                                 <p class="tour-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="buy-ticket-button">Buy Tickets</button>
+                                <button class="buy-ticket-button js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <!-- Class clear để giúp cho class place-list ôm hết tất cả thẻ con -->
@@ -143,9 +146,9 @@
         </div>
     </div>
         
-    <div class="modal">
+    <div class="modal js-modal">
         <div class="modal-container">
-            <div class="modal-close">
+            <div class="modal-close js-modal-close">
                 <i class="ti-close"></i>
             </div>
 
@@ -177,5 +180,37 @@
             </footer>
         </div>
     </div>
+
+    <script>
+        // document ở đây đại diện cho toàn bộ trang web, nên muốn lấy bất kì cái gì trong trang web thì phải đi qua document
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        // Dòng lệnh trên giúp lưu lại 3 biến có class là js-buy-ticket vào biến buyBtns
+        // Nếu là id thì dùng dấu #, class dùng dấu . (tương tự như css selector) 
+
+        // Làm event khi bấm buy tickets sẽ mở modal lên
+        const modal = document.querySelector('.js-modal')
+
+        // Chúng ta sẽ dùng vòng lặp để lắng nghe hành vi click trên từng nút một
+        for (const buyBtn of buyBtns) {
+            // addEventListener là hàm dùng để thêm một người lắng nghe
+            // biến đầu tiên thể hiện hành động mà hàm addEventListener nghe được khi người dùng làm hành động đó (ở đây là click chuột)
+            // biến thứ hai là một hàm để xử lý khi hàm addEventListener nghe được thì sẽ phải làm gì tiếp theo (ở đây là bật lên modal)
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+        
+        // Hàm hiển thị mở giao diện modal mua thêm vé
+        function showBuyTickets() {
+            modal.classList.add('open')
+        }
+
+        // Làm event khi bấm nút close sẽ đóng modal
+        const modalClose = document.querySelector('.js-modal-close')
+        modalClose.addEventListener('click', closeBuyTickets)
+
+        // Hàm hiển thị đóng giao diện modal mua vé 
+        function closeBuyTickets() {
+            modal.classList.remove('open')
+        }
+    </script>
 </body>
 </html>
