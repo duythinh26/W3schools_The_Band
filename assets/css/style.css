@@ -392,6 +392,8 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
     /* Không cần đặt height cứng vì có thể sẽ phát triển thêm nội dung dẫn đến height bị tăng */
     min-height: 200px;
     position: relative;
+    /* Thuộc tính animation giúp chúng ta sử dụng được keyframes */
+    animation: modalFaceIn ease 0.5s;
 }
 
 .modal .modal-close {
@@ -467,4 +469,19 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
 
 .modal .modal-help a {
     color: #2196F3;
+}
+
+/* Muốn khi bấm vào nút buy tickets thì modal cuộn từ trên xuống, chúng ta dùng keyframe
+Keyframe giúp tạo ra chuyển động liên tiếp những hình ảnh tĩnh để tạo ra hoạt họa (giống cơ chế chiếu phim 24 hình/s) */
+@keyframes modalFaceIn {
+    from {
+        /* Điểm bắt đầu cuộn */
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+    to {
+        /* Điểm kết thúc sẽ là ở giữa màn hình (điểm ban đầu khi chúng ta css cho phần modal */
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

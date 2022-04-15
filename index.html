@@ -147,7 +147,7 @@
     </div>
         
     <div class="modal js-modal">
-        <div class="modal-container">
+        <div class="modal-container js-modal-container">
             <div class="modal-close js-modal-close">
                 <i class="ti-close"></i>
             </div>
@@ -211,6 +211,26 @@
         function closeBuyTickets() {
             modal.classList.remove('open')
         }
+
+        // Dòng lệnh giúp bấm vào bất kì vùng nào thuộc class js-modal cũng sẽ đóng phần modal
+        modal.addEventListener('click', closeBuyTickets)
+
+        /*
+         * Tuy nhiên chúng ta chỉ muốn click vào phần ngoài modal để đóng phần modal đi (cái này liên quan đến tính chất nổi bọt của sự kiện)
+        Nổi bọt có nghĩa là khi tạo ra hành vi click của thẻ con thì hành vi click đó có thể lắng nghe được từ những thẻ cha của nó 
+        Do đó khi chúng ta click vào thẻ cha js-modal, bất cứ thẻ con nào bên trong cũng đều nghe được sự kiện đó và thực hiện hành vi đóng phần modal
+        Ý tưởng là chúng ta tìm cách loại trừ đi những thẻ con thuộc phần modal-container trở vào trong là sẽ không bị đóng phần modal 
+        */
+
+        const modalContainer = document.querySelector('.js-modal-container')
+        /**
+         *Chúng ta có thể viết thẳng function vào trong và không cần phải viết tên. Chúng ta truyền vào một biến event. 
+        Mỗi lần chúng ta click vào một hành vi diễn ra luôn trả cho chúng ta một event,
+        từ cái event này có thể giúp chúng ta ngăn chặn hành vi mặc định 
+        */
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation('.js-modal-container')
+        })
     </script>
 </body>
 </html>
