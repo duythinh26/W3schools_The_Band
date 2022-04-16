@@ -24,10 +24,31 @@ html {
 4. Kiểu chữ
 */
 
+/* Common css selectors */
 .text-white {
     color: #fff !important;
 }
 
+/* CSS cho class row và column để tập tư duy hàng cột */
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col {
+    float: left;
+    padding: 0 8px;
+}
+
+.triple-col {
+    width: 33.33333%;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+/* Main css selectors */
 #main {
 
 }
@@ -77,7 +98,7 @@ và thẻ li phải là thẻ con của id="nav" thì mới được tính*/
 #nav li a {
     /*Mặc định là chữ nằm giữa đường bao phủ nó, sử dụng thuộc tính line-height = đúng chiều cao header để áp dụng quy tắc đó giúp căn giữa chữ*/
     line-height: 46px;
-    padding: 0 24px;
+    padding: 0 20px;
     /*Sử dụng thuộc tính display: inline-block để thẻ a ăn theo line-height*/
     display: block;
     /*Tính chất của block kế thừa chiều ngang của thẻ chứa nó*/
@@ -234,14 +255,6 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
     clear: both;
 }
 
-#content .team-member {
-    /* float: left giúp cho 3 thẻ thành viên đứng theo chiều ngang thay vì chiều dọc */
-    float: left;
-    /* width: 33.33333%; giúp cho 3 hình ảnh đứng cùng một hàng vì 3 ảnh cộng lại = 100% */
-    width: 33.33333%;
-    text-align: center;
-}
-
 #content .name {
     font-size: 15px;
     margin: 16px 0;
@@ -290,16 +303,12 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
 
 #content .place-list {
     /* Kỹ thuật padding kèm margin giá trị âm để kéo mép phần place-list bằng với phần content của web */
-    margin: 0 -8px;
     padding-bottom: 32px;
 }
 
 #content .place-section {
-    float: left;
     /* width: 33.33333%; giúp cho 3 hình ảnh đứng cùng một hàng vì 3 ảnh cộng lại = 100% */
     width: 33.33333%;
-    /* Padding trái phải 8px để tạo khoảng cách giữa các ảnh */
-    padding: 0 8px;
 }
 
 #content .tour-img {
