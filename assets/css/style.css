@@ -40,6 +40,14 @@ html {
     padding: 0 8px;
 }
 
+.full-col {
+    width: 100%;
+}
+
+.double-col {
+    width: 50%;
+}
+
 .triple-col {
     width: 33.33333%;
 }
@@ -364,6 +372,25 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
     background-color: #ccc;
     cursor: pointer;
     border: 2px solid #ccc;
+}
+
+#content .contact-content {
+    padding: 32px 0;
+}
+
+#content .contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+/* Nên đặt width cho icon thay vì đặt padding hay margin để đảm bảo kích thước giữa icon và chữ vẫn bằng nhau */
+#content .contact-info p i {
+    width: 30px;
+    /* Khi set width: 30px; mà không có display: inline-block; cho selector này thì width: 30px; sẽ không hoạt động */
+    display: inline-block;
+}
+
+#content .contact-content input {
+    padding: 8px;
 }
 
 #footer {
