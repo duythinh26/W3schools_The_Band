@@ -35,6 +35,13 @@ html {
     margin-right: -8px;
 }
 
+/* Thay vì tạo class clear để ôm hết các phần tử, chúng ta sử dụng pseudo element để làm điều này trên thực tế */
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 .col {
     float: left;
     padding: 0 8px;
@@ -54,6 +61,22 @@ html {
 
 .text-center {
     text-align: center !important;
+}
+
+.btn {
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.btn:hover { 
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+    border: 2px solid #ccc;
 }
 
 /* Main css selectors */
@@ -221,7 +244,7 @@ sẽ mất hiệu ứng :hover của thẻ a, nên chúng ta :hover vào thẻ l
     /* Margin sang trái và sang phải 1 khoảng bằng auto sẽ đẩy phần được margin ra giữa */
     margin-left: auto;
     margin-right: auto;
-    padding: 64px 0;
+    padding: 64px 0 112px;
 }
 
 #content .heading-section {
@@ -311,7 +334,7 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
 
 #content .place-list {
     /* Kỹ thuật padding kèm margin giá trị âm để kéo mép phần place-list bằng với phần content của web */
-    padding-bottom: 32px;
+    padding-top: 32px;
 }
 
 #content .place-section {
@@ -361,10 +384,10 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
     background-color: #000;
     text-decoration: none;
     padding: 12px 16px;
+    display: inline-block;
     margin-bottom: 16px;
     /* Một thẻ inline (thẻ a) đang nằm dưới một thẻ block (thẻ p) nên nếu không sử dụng display: inline-block;
     sẽ làm cho các thuộc tính margin và padding trở nên vô hiệu lực */
-    display: inline-block;
 }   
 
 #content .buy-ticket-button:hover {
@@ -389,8 +412,32 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
     display: inline-block;
 }
 
-#content .contact-content input {
+#contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
     padding: 8px;
+    margin: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-form .form-submit {
+    font-size: 15px;
+    color: #fff;
+    background-color: #000;
+    padding: 8px 12px;
+    margin: 16px -4px 16px 0px;
+    float: right;
+}
+
+.contact-form .form-submit:hover {
+    color: #000;
+    background-color: #ccc;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
 }
 
 #footer {
