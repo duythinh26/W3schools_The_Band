@@ -440,8 +440,34 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
     cursor: pointer;
 }
 
-#footer {
+.map-section img {
+    width: 100%;
+}
 
+#footer {
+    padding: 64px 16px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+#footer .social-list {
+    font-size: 20px;
+}
+
+#footer .social-list a {
+    color: #000;
+    text-decoration: none;
+}
+
+#footer .social-list a:hover {
+    opacity: 0.5;
+}
+
+#footer .copy-right {
+    font-size: 15px;
+    margin: 15px;
+    color: #000;
+    opacity: 0.5;
 }
 
 .modal {
