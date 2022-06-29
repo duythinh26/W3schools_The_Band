@@ -9,6 +9,8 @@
 html {
     /*Thuộc tính font-family set font chữ cho cả website*/
     font-family: Lato, sans-serif;
+    /* Thuộc tính scroll-behavior giúp chúng ta tùy chỉnh hành động cuộn */
+    scroll-behavior: smooth;
 }
 
 /*Nguyên tắc làm việc
