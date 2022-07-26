@@ -83,7 +83,7 @@ html {
 
 /* Main css selectors */
 #main {
-
+    /* overflow: hidden; */
 }
 
 #nav {
@@ -243,10 +243,13 @@ sẽ mất hiệu ứng :hover của thẻ a, nên chúng ta :hover vào thẻ l
 
 #content .content-section {
     width: 800px;
+    /* max-width: 100%; kèm padding left và right 16px giúp cho content được dính sát vào màn hình trên tablet,
+    đồng thời cách lề trái phải = 16px thay vì bị lỗi */
+    max-width: 100%;
+    padding: 64px 16px 112px;
     /* Margin sang trái và sang phải 1 khoảng bằng auto sẽ đẩy phần được margin ra giữa */
     margin-left: auto;
     margin-right: auto;
-    padding: 64px 0 112px;
 }
 
 #content .heading-section {
