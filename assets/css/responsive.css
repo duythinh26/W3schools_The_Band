@@ -1,0 +1,16 @@
+/* Tạo ra breakpoint responsive cho PC để khi chúng ta cần các tính năng chỉ PC mới có thì viết vào */
+
+/* PC Responsive */
+@media (min-width: 1024px) {
+    
+}
+
+/* Tablet Responsive */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+}
+
+/* Mobile Responsive */
+@media (max-width: 739px) {
+    
+}
