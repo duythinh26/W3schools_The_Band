@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Band</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Phải viết file responsive.css ở bên dưới file style.css để được ghi đè những thuộc tính responsive -->
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css">
 </head>
@@ -38,6 +39,10 @@
             <!-- Begin button -->
             <div class="search-button">
                 <i class="search-icon ti-search"></i>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
             </div>
             <!-- End button -->
         </div>
@@ -231,6 +236,7 @@
         </div>
     </div>
 
+    <!-- Script cho menu đóng mở ở phần buy ticket -->
     <script>
         // document ở đây đại diện cho toàn bộ trang web, nên muốn lấy bất kì cái gì trong trang web thì phải đi qua document
         const buyBtns = document.querySelectorAll('.js-buy-ticket')
@@ -281,6 +287,41 @@
         modalContainer.addEventListener('click', function (event) {
             event.stopPropagation('.js-modal-container')
         })
+    </script>
+    
+    <!-- Script cho responsive -->
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        // Tạo một biến headerHeight để lưu chiều cao hiện tại của header
+        var headerHeight = header.clientHeight;
+
+        // Code cho đóng/mở mobile menu
+        mobileMenu.onclick = function () {
+            /*
+            Trong Javascript, dấu === dùng để so sánh bên trái có = bên phải hay không. 
+            Sau đó kết quả được gán vào biến bên trái
+            */
+            var isClosed = header.clientHeight === headerHeight;
+            // Nếu đang đóng, style thuộc tính height của header thành auto
+            // Nếu đang mở, style thuộc tính height của header thành 46px hoặc null để ẩn menu con đi
+            if (isClosed) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
+        }
+
+        // Code tự động đóng menu khi chọn 1 phần tử trong menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            
+            menuItem.onclick = function () {
+                header.style.height = null;
+            }
+        }
     </script>
 </body>
 </html>

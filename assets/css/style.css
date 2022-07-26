@@ -175,19 +175,33 @@ sẽ mất hiệu ứng :hover của thẻ a, nên chúng ta :hover vào thẻ l
     font-size: 14px;
 }
 
+#header .mobile-menu-btn, 
 #header .search-button {
     /* Thuộc tính float: right kéo phần tử sang bên phải. 
     Khi thẻ div dù có tính chất khối bị thêm thuộc tính float thì vẫn mất tính chất khối của nó */
     float: right;
+    padding: 0 21px;
+}
+
+#header .menu-icon, 
+#header .search-icon {
     color: #fff;
     line-height: 46px;
-    padding: 0 21px;
     cursor: pointer;
 }
 
 #header .search-button:hover {
     cursor: pointer;
-    background-color: red;
+    background-color: #f44336;
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+
+/* Dòng phía dưới có nghĩa là khi hover vào class mobile-menu-btn, css lại class menu-icon */
+#header .mobile-menu-btn:hover .menu-icon{
+    color: #000;
 }
 
 #slider {

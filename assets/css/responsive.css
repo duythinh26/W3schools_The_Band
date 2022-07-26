@@ -12,5 +12,15 @@
 
 /* Mobile Responsive */
 @media (max-width: 739px) {
-    
+    #header {
+        overflow: hidden;
+    }
+
+    #header .search-button {
+        display: none;
+    }
+
+    #nav > li {
+        display: block;
+    }
 }
