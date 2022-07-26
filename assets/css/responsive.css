@@ -2,7 +2,9 @@
 
 /* PC Responsive */
 @media (min-width: 1024px) {
-    
+    #mobile-menu {
+        display: none;
+    }
 }
 
 /* Tablet Responsive */
@@ -12,15 +14,24 @@
 
 /* Mobile Responsive */
 @media (max-width: 739px) {
+    #nav {
+        display: block;
+    }
+    
+    #nav > li {
+        display: block;
+    }
+
+    /* Dùng pseudo element first child để chọn thẻ li đầu tiên */
+    #nav > li:first-child {
+        display: inline-block;
+    }
+
     #header {
         overflow: hidden;
     }
-
+    
     #header .search-button {
         display: none;
-    }
-
-    #nav > li {
-        display: block;
     }
 }
