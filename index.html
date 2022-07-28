@@ -317,9 +317,24 @@
 
         for (var i = 0; i < menuItems.length; i++) {
             var menuItem = menuItems[i];
+            /**
+             * nextElementSibling: Kiểm tra xem có thẻ anh chị em nào liền kề hay không
+             * nextElementSibling.classList.contains: Kiểm tra xem có thẻ anh chị em nào liền kề chứa class trong ngoặc hay không
+             * 
+            */
             
+            // Trong JS, khi chúng ta click, tại chính phần () của function sẽ trả về một event 
             menuItem.onclick = function () {
-                header.style.height = null;
+                // Chúng ta cần phải đưa biến isParentMenu vào trong để được kiểm tra ngay sau khi click vào, thay vì kiểm tra từ trước
+                // Từ khóa this ở đây để trình duyệt hiểu là chính phần tử được bấm vào
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                // Trong JS thường tránh viết điều kiện ngược như !isParentMenu
+                if (isParentMenu) {
+                    // preventDefault() nghĩa là ngăn cản hành động mặc định
+                    event.preventDefault();
+                } else {
+                    header.style.height = null; 
+                }
             }
         }
     </script>
