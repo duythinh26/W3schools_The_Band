@@ -48,4 +48,21 @@
         color: #fff;
         padding: 14px 36px;
     }
+
+    #content .member-img {
+        width: 60%;
+    }
+
+    #content .mobile-col-full {
+        width: 100%;
+    }
+
+    #tour .mobile-col-full {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .mb-16 {
+        margin-bottom: 16px;
+    }
 }

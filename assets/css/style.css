@@ -81,6 +81,10 @@ html {
     border: 2px solid #ccc;
 }
 
+.mt-16 {
+    margin-top: 16px;
+}
+
 /* Main css selectors */
 #main {
     /* overflow: hidden; */
@@ -359,7 +363,7 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
 
 #content .place-list {
     /* Kỹ thuật padding kèm margin giá trị âm để kéo mép phần place-list bằng với phần content của web */
-    padding-top: 32px;
+    margin-top: 16px;
 }
 
 #content .place-section {
