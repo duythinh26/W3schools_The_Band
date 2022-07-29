@@ -14,6 +14,10 @@
 
 /* Mobile Responsive */
 @media (max-width: 739px) {
+    .mobile-full-width {
+        width: 100% !important;
+    }
+
     #header {
         overflow: hidden;
     }
@@ -49,6 +53,10 @@
         padding: 14px 36px;
     }
 
+    #slider .text-content {
+        display: none;
+    }
+
     #content .member-img {
         width: 60%;
     }
@@ -59,10 +67,25 @@
 
     #tour .mobile-col-full {
         width: 100%;
-        margin-bottom: 16px;
     }
 
     .mb-16 {
         margin-bottom: 16px;
+    }
+
+    .map-section img {
+        margin-top: 100px;
+    }
+
+    .contact-form {
+        margin-top: 16px;
+    }
+
+    .contact-form .form-control {
+        padding: 11px;
+    }
+
+    .contact-form .form-submit {
+        width: 100%;
     }
 }

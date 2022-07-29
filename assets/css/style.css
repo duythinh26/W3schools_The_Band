@@ -330,7 +330,7 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
 }
 
 #content .ticket-list {
-    margin: 40px 0;
+    margin: 40px 0 16px;
     background-color: #fff;
 }
 
