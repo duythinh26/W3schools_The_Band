@@ -13,6 +13,14 @@
     .mobile-menu-btn {
         display: none;
     }
+
+    .btn {
+        padding: 16px 16px;
+    }
+
+    .contact-form .form-submit {
+        padding: 12px 12px;
+    }
 }
 
 /* Mobile Responsive */
@@ -96,4 +104,9 @@
     .contact-form .form-submit {
         width: 100%;
     }
+}
+
+/* Tablet and Mobile responsive */
+@media (max-width: 1023px) {
+
 }
