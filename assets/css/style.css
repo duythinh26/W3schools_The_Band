@@ -515,6 +515,8 @@ nằm dưới các class con team-member và dùng thuộc tính clear: both */
     align-items: center;
     /* Dùng thuộc tính justify-content: center; vào class cha modal để class modal-container nằm giữa chiều ngang class cha modal */
     justify-content: center;
+    /* margin: auto để căn giữa */
+    margin: auto;
 
     /* Resonsive cho modal */
     max-width: calc(100% - 32px);

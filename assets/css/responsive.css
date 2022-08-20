@@ -9,13 +9,24 @@
 
 /* Tablet Responsive */
 @media (min-width: 740px) and (max-width: 1023px) {
-    
+    /* Ẩn menu mobile khi ở trên tablet */
+    .mobile-menu-btn {
+        display: none;
+    }
 }
 
 /* Mobile Responsive */
 @media (max-width: 739px) {
     .mobile-full-width {
         width: 100% !important;
+    }
+
+    .mobile-center {
+        margin: auto;
+    }
+
+    .search-button {
+        display: none;
     }
 
     #header {
@@ -61,10 +72,7 @@
         width: 60%;
     }
 
-    #content .mobile-col-full {
-        width: 100%;
-    }
-
+    #content .mobile-col-full, 
     #tour .mobile-col-full {
         width: 100%;
     }
