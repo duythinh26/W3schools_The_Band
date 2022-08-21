@@ -103,7 +103,7 @@
     }
 
     .contact-form {
-        margin-top: 16px;
+        margin-top: 32px;
     }
 
     .contact-form .form-control {
@@ -125,5 +125,9 @@
         padding: 12px 0;
         /* Phải có display: inline-block để thuộc tính padding ở trên có tác dụng */
         display: inline-block;
+    }
+
+    #content .contact-info {
+        line-height: 2.0;
     }
 }
