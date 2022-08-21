@@ -225,7 +225,7 @@ sẽ mất hiệu ứng :hover của thẻ a, nên chúng ta :hover vào thẻ l
     margin-top: 46px;
     /* 50% ở đây là 50% chiều ngang của chính nó */
     padding-top: 50%;
-    background: url('/assets/img/slider/chicago.jpg') top center / cover no-repeat;
+    background: url('../img/slider/chicago.jpg') top center / cover no-repeat;
     /* Thuộc tính background phía trên hiện tại đang viết gộp lại từ nhiều thuộc tính khác.
     Chúng ta có thể viết rời ra như sau:
     background-image: url('/Project/W3_the_band/assets/img/slider/chicago.jpg');
@@ -261,7 +261,7 @@ sẽ mất hiệu ứng :hover của thẻ a, nên chúng ta :hover vào thẻ l
 #slider .text-description {
     font-size: 15px;
     margin-top: 25px;
-
+    text-shadow: 0 0 1px #000;
 }
 
 #content {

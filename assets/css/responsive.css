@@ -1,14 +1,14 @@
 /* Tạo ra breakpoint responsive cho PC để khi chúng ta cần các tính năng chỉ PC mới có thì viết vào */
 
 /* PC Responsive */
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
     #mobile-menu {
         display: none;
     }
 }
 
 /* Tablet Responsive */
-@media (min-width: 740px) and (max-width: 1023px) {
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
     /* Ẩn menu mobile khi ở trên tablet */
     .mobile-menu-btn {
         display: none;
@@ -33,7 +33,7 @@
 }
 
 /* Mobile Responsive */
-@media (max-width: 739px) {
+@media (max-width: 46.1875em) {
     .mobile-full-width {
         width: 100% !important;
     }
@@ -116,7 +116,7 @@
 }
 
 /* Tablet and Mobile responsive */
-@media (max-width: 1023px) {
+@media (max-width: 63.9375em) {
     #footer .social-list a {
         margin: 0 8px;
     }
